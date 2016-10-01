@@ -1,0 +1,69 @@
+https://github.com/exif-js/exif-js/blob/master/exif.js
+https://ssl.panoramio.com/map/?user=9230634#lt=50.279351&ln=-111.046875&z=13&k=1&a=1&tab=4&pl=all
+https://developers.google.com/maps/documentation/javascript/examples/marker-simple
+https://developers.google.com/maps/documentation/javascript/
+
+
+https://developers.google.com/maps/documentation/javascript/3.exp/reference
+
+https://drive.google.com/open?id=0B7FMzvrzttT6a2owU0ZIeTh0SUk
+
+http://www.exif.org/Exif2-2.PDF
+https://www.media.mit.edu/pia/Research/deepview/exif.html
+		de->tag,x	829a	Exposure time ExposureTime 33434 829A RATIONAL 1 
+		de->tag,x	829d	F number FNumber 33437 829D RATIONAL 1 
+		de->tag,x	8822	Exposure program ExposureProgram 34850 8822 SHORT 1
+		de->tag,x	8827	ISO speed rating ISOSpeedRatings 34855 8827 SHORT Any 
+		de->tag,x	9000	Exif version ExifVersion 36864 9000 UNDEFINED 4
+		de->tag,x	9003	Date and time of original data generation DateTimeOriginal 36867 9003 ASCII 20 
+		de->tag,x	9004	Date and time of digital data generation DateTimeDigitized 36868 9004 ASCII 20 
+		de->tag,x	9101	Meaning of each component ComponentsConfiguration 37121 9101 UNDEFINED 4
+		de->tag,x	9201	Shutter speed ShutterSpeedValue 37377 9201 SRATIONAL 1 
+		de->tag,x	9202	Aperture ApertureValue 37378 9202 RATIONAL 1
+		de->tag,x	9203	Brightness BrightnessValue 37379 9203 SRATIONAL 1 
+		de->tag,x	9204	Exposure bias ExposureBiasValue 37380 9204 SRATIONAL 1
+		de->tag,x	9205	Maximum lens aperture MaxApertureValue 37381 9205 RATIONAL 1
+		de->tag,x	9207	Metering mode MeteringMode 37383 9207 SHORT 1
+		de->tag,x	9208	Light source LightSource 37384 9208 SHORT 1
+		de->tag,x	9209	Flash Flash 37385 9209 SHORT 1
+		de->tag,x	920a	Lens focal length FocalLength 37386 920A RATIONAL 1
+		de->tag,x	927c	Manufacturer notes MakerNote 37500 927C UNDEFINED Any
+		de->tag,x	9286	User comments UserComment 37510 9286 UNDEFINED Any
+		de->tag,x	a000	Supported Flashpix version FlashpixVersion 40960 A000 UNDEFINED 4
+		de->tag,x	a001	Color space information ColorSpace 40961 A001 SHORT 1
+		de->tag,x	a002	Valid image width PixelXDimension 40962 A002 SHORT or LONG 1
+		de->tag,x	a003	Valid image height PixelYDimension 40963 A003 SHORT or LONG 1
+		de->tag,x	a005	Interoperability IFD Pointer 
+		de->tag,x	a217	Sensing method SensingMethod 41495 A217 SHORT 1
+		de->tag,x	a301	Scene type SceneType 41729 A301 UNDEFINED 1
+		de->tag,x	a402	Exposure mode ExposureMode 41986 A402 SHORT 1 
+		de->tag,x	a403	White balance WhiteBalance 41987 A403 SHORT 1
+		de->tag,x	a405	Focal length in 35 mm film FocalLengthIn35mmFilm 41989 A405 SHORT 1
+		de->tag,x	a406	Scene capture type SceneCaptureType 41990 A406 SHORT 1
+		de->tag,x	a420	Unique image ID ImageUniqueID 42016 A420 ASCII 33
+
+		de->tag,x	0x0005	Altitude reference GPSAltitudeRef 5 5 BYTE 1
+		de->tag,x	0x0001	North or South Latitude GPSLatitudeRef 1 1 ASCII 2
+		de->tag,x	0x0002	Latitude GPSLatitude 2 2 RATIONAL 3
+		de->tag,x	0x0003	East or West Longitude GPSLongitudeRef 3 3 ASCII 2
+		de->tag,x	0x0004	Longitude GPSLongitude 4 4 RATIONAL 3
+		de->tag,x	0x0005	Altitude reference GPSAltitudeRef 5 5 BYTE 1
+		de->tag,x	0x0006	Altitude GPSAltitude 6 6 RATIONAL 1
+		de->tag,x	0x0007	GPS time (atomic clock) GPSTimeStamp 7 7 RATIONAL 3
+		de->tag,x	0x001d	GPS date GPSDateStamp 29 1D ASCII 11
+
+TODO:
+- Put icons to our git site!
+
+- Put fixes into the text file and supply it as parameter
+- Put exceptions into the text file and supply it as parameter
+- Need shit loads of parameters for the executable.
+
+http://blog.teamtreehouse.com/using-github-pages-to-host-your-website
+git checkout --orphan gh-pages
+git rm -rf .
+git commit -a -m "Adding pages"
+git push origin gh-pages
+https://spershin.github.io/GoogleMapTrip/CanadaTripFinal.html
+https://github.com/spershin/GoogleMapTrip
+
