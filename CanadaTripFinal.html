@@ -45,12 +45,10 @@
       /*"09.10"*/ "Niagara Falls, NY, USA",
     ];
 
-    var iconStarGold = 'https://spershin.github.io/GoogleMapTrip/images/starGold.png';
-    var iconStarBlack = 'https://spershin.github.io/GoogleMapTrip/images/starBlack.png';
-    var iconTarget = 'https://spershin.github.io/GoogleMapTrip/images/target.png';
-    var iconPathBlue = 'https://spershin.github.io/GoogleMapTrip/images/pathBlue.png';
-    var iconPathBlack = 'https://spershin.github.io/GoogleMapTrip/images/pathBlack.png';
-    var disabledOpacity = '0.8';
+    var iconStar = 'http://icons.iconarchive.com/icons/gianni-polito/colobrush/24/system-star-icon.png';
+    var iconBlackStar = 'http://icons.iconarchive.com/icons/icons8/windows-8/24/Messaging-Star-icon.png';
+    var iconTarget = 'http://icons.iconarchive.com/icons/omercetin/pixelophilia2/32/target-icon.png';
+    var iconPath = 'http://icons.iconarchive.com/icons/icons8/windows-8/24/Data-Line-Chart-icon.png';
 
     var infoWindow;
     var elevationService;
@@ -4943,10 +4941,10 @@
       imageTarget.style.paddingLeft = '5px';
       horizontalDiv.appendChild(imageTarget);
 
-      var imagePath = CreateImage(iconPathBlue, 'Click to Hide/show all pathes');
+      var imagePath = CreateImage(iconPath, 'Click to Hide/show all pathes');
       horizontalDiv.appendChild(imagePath);
 
-      var imageNodes = CreateImage(iconStarGold, 'Click to Hide/show all nodes');
+      var imageNodes = CreateImage(iconStar, 'Click to Hide/show all nodes');
       horizontalDiv.appendChild(imageNodes);
 
       var span = CreateSpan(null, 'The Whole Trip', 'black');
@@ -4999,12 +4997,12 @@
       imageTarget.style.paddingLeft = '5px';
       horizontalDiv.appendChild(imageTarget);
 
-      var imageDayPath = CreateImage(iconPathBlue, 'Click to Hide/show path for\n' + DAY_DESCRIPTIONS[dayIndex]);
+      var imageDayPath = CreateImage(iconPath, 'Click to Hide/show path for\n' + DAY_DESCRIPTIONS[dayIndex]);
       imageDayPath.id = 'imageDayPath' + dayIndex;
       imageDayPath.index = dayIndex;
       horizontalDiv.appendChild(imageDayPath);
 
-      var imageDayNodes = CreateImage(iconStarGold, 'Click to Hide/show nodes for\n' + DAY_DESCRIPTIONS[dayIndex]);
+      var imageDayNodes = CreateImage(iconStar, 'Click to Hide/show nodes for\n' + DAY_DESCRIPTIONS[dayIndex]);
       imageDayNodes.id = 'imageDayNodes' + dayIndex;
       imageDayNodes.index = dayIndex;
       horizontalDiv.appendChild(imageDayNodes);
@@ -5045,8 +5043,7 @@
         }
       }
       showAllPathes = !showAllPathes;
-      this.setAttribute('src', showAllPathes ? iconPathBlue : iconPathBlack);
-      this.style.opacity = showAllPathes ? '1.0' : disabledOpacity;
+      this.style.opacity = showAllPathes ? '1.0' : '0.3';
     }
 
     function OnToggleDayPath()
@@ -5054,8 +5051,7 @@
       var day = days[this.index];
       day.showPath = !day.showPath;
       day.line.setVisible(day.showPath);
-      this.setAttribute('src', day.showPath ? iconPathBlue : iconPathBlack);
-      this.style.opacity = day.showPath ? '1.0' : disabledOpacity;
+      this.style.opacity = day.showPath ? '1.0' : '0.3';
     }
 
     function OnToggleTripNodes()
@@ -5073,8 +5069,8 @@
         }
       }
       showAllNodes = !showAllNodes;
-      this.setAttribute('src', showAllNodes ? iconStarGold : iconStarBlack);
-      this.style.opacity = showAllNodes ? '1.0' : disabledOpacity;
+      this.setAttribute('src', showAllNodes ? iconStar : iconBlackStar);
+      this.style.opacity = showAllNodes ? '1.0' : '0.3';
     }
 
     function OnToggleDayNodes()
@@ -5085,8 +5081,8 @@
       {
         day.nodes[nodeIndex].marker.setVisible(day.showNodes);
       }
-      this.setAttribute('src', day.showNodes ? iconStarGold : iconStarBlack);
-      this.style.opacity = day.showNodes ? '1.0' : disabledOpacity;
+      this.setAttribute('src', day.showNodes ? iconStar : iconBlackStar);
+      this.style.opacity = day.showNodes ? '1.0' : '0.3';
     }
   </script>
 
