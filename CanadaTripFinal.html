@@ -19,6 +19,14 @@
   </style>
 </head>
 <body>
+  <div id="authorize-div" style="display: none">
+      <span>Authorize access to Drive API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+  </div>
+  <pre id="output"></pre>
   <div id="map"></div>
   <script>
     // ================== Global Variables ==================
@@ -5095,6 +5103,7 @@
 
     function InitMap()
     {
+      alert('InitMap');
       try
       {
         CreateMapAndServices();
@@ -5708,6 +5717,7 @@
     // Check if current user has authorized this application.
     function CheckAuth()
     {
+      alert('CheckAuth');
       gapi.auth.authorize(
         {
           'client_id': CLIENT_ID,
@@ -5721,8 +5731,19 @@
     {
       try
       {
+        alert('OnAuthResult');
+        var authorizeDiv = document.getElementById('authorize-div');
         if(authResult && !authResult.error)
+        {
+          alert('OnAuthResult All good!');
+          authorizeDiv.style.display = 'none';
           loadDriveApi();
+        }
+        else
+        {
+          alert('OnAuthResult Not good, show UI!');
+          authorizeDiv.style.display = 'inline';
+        }
       }
       catch(e)
       {
@@ -5733,9 +5754,10 @@
     // Initiate auth flow in response to user clicking authorize button. @param {Event} event Button click event.
     function handleAuthClick(event)
     {
+      alert('handleAuthClick');
       gapi.auth.authorize(
         { client_id: CLIENT_ID, scope: SCOPES, immediate: false },
-        handleAuthResult);
+        OnAuthResult);
       return false;
     }
 
@@ -5754,9 +5776,9 @@
 
   </script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKzLqx1T5T7tadUgEZai1KP08UmlQozSs&libraries=places&callback=InitMap">
-  </script>
   <script src="https://apis.google.com/js/client.js?onload=CheckAuth">
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKzLqx1T5T7tadUgEZai1KP08UmlQozSs&libraries=places&callback=InitMap">
   </script>
 </body>
 </html>
