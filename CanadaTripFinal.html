@@ -5103,7 +5103,6 @@
 
     function InitMap()
     {
-      alert('InitMap');
       try
       {
         CreateMapAndServices();
@@ -5717,7 +5716,6 @@
     // Check if current user has authorized this application.
     function CheckAuth()
     {
-      alert('CheckAuth');
       gapi.auth.authorize(
         {
           'client_id': CLIENT_ID,
@@ -5731,17 +5729,14 @@
     {
       try
       {
-        alert('OnAuthResult');
         var authorizeDiv = document.getElementById('authorize-div');
         if(authResult && !authResult.error)
         {
-          alert('OnAuthResult All good!');
           authorizeDiv.style.display = 'none';
           loadDriveApi();
         }
         else
         {
-          alert('OnAuthResult Not good, show UI!');
           authorizeDiv.style.display = 'inline';
         }
       }
@@ -5754,7 +5749,6 @@
     // Initiate auth flow in response to user clicking authorize button. @param {Event} event Button click event.
     function handleAuthClick(event)
     {
-      alert('handleAuthClick');
       gapi.auth.authorize(
         { client_id: CLIENT_ID, scope: SCOPES, immediate: false },
         OnAuthResult);
